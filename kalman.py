@@ -1,3 +1,15 @@
+"""
+A gross oversimplification of the the kalman filter
+For each timestep:
+current estimation = Gain * Measured + (1 - Gain) * previousestimation
+
+The only unknown is the gain, this is continually revised using new
+info and something from the previous state Kalman filter finds the
+most optimum averaging factor for each consequent state. Also somehow
+remembers a little bit about the past states
+a very good dummy intro:
+http://bilgin.esme.org/BitsBytes/KalmanFilterforDummies.aspx
+"""
 import pylab
 import randomnum
 from randomnum import measurements
